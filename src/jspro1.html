@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/?size=100&id=4377&format=png&color=000000">
+    <title>BMI</title>
+    <style>
+    #box{
+        position: relative;
+        background-color:#262626;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    #box::after,
+    #box::before {
+        content: "";
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+        position: absolute;
+        background-size:400%;
+        top:-2px;
+        left:-2px;
+        animation: rgbbox 10s linear infinite alternate;
+        z-index: -1;
+        border-radius: 10px;
+    }
+    #box::after{
+        filter: blur(30px);
+    }
+    @keyframes rgbbox{
+        0%{
+            background-position: 0 0;
+        }
+        50%{
+            background-position: 100% 0;
+        }
+        100%{
+            background-position: 0 0;
+        }
+    }
+    </style>
+</head>
+<body class="bg-black text-blue-50">
+    <div class="border-2 w-20 px-3 m-5 rounded-2xl bg-gradient-to-br from-red-700 to-blue-400  text-black font-bold"><a href="index.html">Home</a></div>
+    <div class="flex justify-center items-center ">
+    <div id = "box" class ="form  w-65 min-h-80  flex flex-col sm:w-[500px]">
+    <h1 class="mx-auto text-2xl py-5">BMI calculator</h1>
+    <form>
+        <lable for="height" class="pl-10 sm:pl-7">Enter your height in cm :</lable>
+        <input class="bg-white rounded-md text-black mx-8 mt-3 sm:mx-2 sm:mt-4" type="text" id="height" ><br><br>
+        <lable for="weight" class="pl-10 sm:pl-7">Enter your weight in kg :</lable>
+        <input class="bg-white rounded-md text-black mx-8 mt-3 sm:mx-2 sm:mt-4" type="text" id="weight" ><br><br>
+        <button class="bg-gradient-to-bl from-red-600 to-black rounded-md w-20 h-8 mx-23 sm:mx-[40%] sm:mt-10" type="submit">submit</button><br><br>
+    </form>
+    <div id="result" class=" min-h-10  pb-10 w-50 pl-8" ></div>
+</div>
+</div>
+<script src="jspro1.js"></script>
+</body>
+</html>

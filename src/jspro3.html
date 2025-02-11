@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/?size=100&id=4377&format=png&color=000000">
+    <title>Number Guess Game</title>
+</head>
+<style>
+    #box{
+        position: relative;
+        background-color:#262626;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    #box::after,
+    #box::before {
+        content: "";
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+        position: absolute;
+        background-size:400%;
+        top:-2px;
+        left:-2px;
+        animation: rgbbox 10s linear infinite alternate;
+        z-index: -1;
+        border-radius: 10px;
+    }
+    #box::after{
+        filter: blur(30px);
+    }
+    @keyframes rgbbox{
+        0%{
+            background-position: 0 0;
+        }
+        50%{
+            background-position: 100% 0;
+        }
+        100%{
+            background-position: 0 0;
+        }
+    }
+</style>
+<body class="bg-black">
+    <div class="border-2 w-20 px-3 m-5 rounded-2xl bg-gradient-to-br from-red-700 to-blue-400  text-black font-bold"><a href="index.html">Home</a></div>
+    <div class="flex justify-center ">
+    <div id="box" class="w-80 md:w-xl  flex flex-col font-mono">
+        <h2 class="text-xl font-bold mt-3">Number Guess Game</h2>
+        <p class=" mt-3 mx-3">Try and guess the number 1 to 100</p>
+        <p class=" my-3 mx-3">You have 10 attempts to guess the right number.</p>
+        <form>
+            <label for="number" class="mt-5 mx-20 md:mx-1">GUESS A NUMVER : </label>
+            <input type="text" id="number" class="bg-amber-50 rounded-md text-black mt-3 mx-15 md:mx-2"><br>
+            <button class="bg-gradient-to-br from-red-800 to-black w-[90px] min-h-8 rounded-md mx-[33%] mt-5 hover:cursor-pointer" type="submit" id="submit">submit</button>
+        </form>
+        <div class="results">
+            <p class="mt-3 mx-20">Previous Guesses: <span class="guesses mt-3  text-green-400 mx-3"></span></p>
+            <p class="mt-3 mx-15">Guesses remaining: <span class="remaing mt-3 text-red-400 ">10</span></p>
+            <p class="loworhi my-3 text-red-400 ml-10"></p>
+        </div>
+    </div>
+    </div>
+    <script src="jspro3.js"></script>
+</body>
+</html>

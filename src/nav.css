@@ -1,0 +1,188 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+nav{
+    margin: 50px auto;
+    position: relative;
+    background-color: rgb(57, 51, 51);
+    height: 50px;
+    width: 1000px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a{
+    display: flex;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    z-index: 1;
+}
+nav span{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 200px;
+    border-radius: 10px;
+    height: 100%;
+    transition: 1s;
+    animation-timing-function: linear;
+    background: linear-gradient(45deg, rgb(180, 16, 16),rgb(20, 20, 20));
+}
+
+nav a:nth-child(1):hover~span{
+    left:0;
+}
+nav a:nth-child(2):hover~span{
+    left:200px;
+}
+nav a:nth-child(3):hover~span{
+    left:400px;
+}
+nav a:nth-child(4):hover~span{
+    left:600px;
+}
+nav a:nth-child(5):hover~span{
+    left:800px;
+}
+
+@media screen and (min-width: 300px) {
+    nav {
+        width: 350px;
+    }
+    .siz{
+        font-size: 0.8rem;
+    }
+    nav span {
+        width: 70px; 
+    }
+    .main{
+       justify-content: center;
+    }
+    nav a:nth-child(1):hover ~ span { left: 0; }
+    nav a:nth-child(2):hover ~ span { left: 70px; }
+    nav a:nth-child(3):hover ~ span { left: 140px; }
+    nav a:nth-child(4):hover ~ span { left: 210px; }
+    nav a:nth-child(5):hover ~ span { left: 280px; }
+    
+}
+
+@media screen and (min-width: 640px) {
+    nav {
+        width: 500px;
+    }
+    .siz{
+        font-size: 1rem;
+    }
+    nav span {
+        width: 100px; 
+    }
+    .main{
+       justify-content: center;
+    }
+    nav a:nth-child(1):hover ~ span { left: 0; }
+    nav a:nth-child(2):hover ~ span { left: 100px; }
+    nav a:nth-child(3):hover ~ span { left: 200px; }
+    nav a:nth-child(4):hover ~ span { left: 300px; }
+    nav a:nth-child(5):hover ~ span { left: 400px; }
+}
+
+@media screen and (min-width: 768px){
+    nav{
+        width: 750px;
+    }
+    .siz{
+        font-size: 1.5rem; 
+    }
+    nav span {
+        width: 150px; 
+    }
+    nav a:nth-child(1):hover ~ span { left: 0; }
+    nav a:nth-child(2):hover ~ span { left: 150px;}
+    nav a:nth-child(3):hover ~ span { left: 300px;}
+    nav a:nth-child(4):hover ~ span { left: 450px;}
+    nav a:nth-child(5):hover ~ span { left: 600px;}
+}
+
+.main{
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color:#262626;
+    border-radius: 10px;
+    margin: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+}
+div a{
+    color:white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+#box::after,
+#box::before {
+    content: "";
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+    position: absolute;
+    background-size:400%;
+    top:-2px;
+    left:-2px;
+    animation: rgbbox 10s linear infinite alternate;
+    z-index: -1;
+    border-radius: 10px;
+}
+#box::after{
+    filter: blur(30px);
+}
+@keyframes rgbbox{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 100% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+#name{
+    color: #262626;
+    position:fixed;
+    z-index: -1;
+    font-size: 350px;
+    rotate: -30deg;
+    bottom: 150px;
+    left: 20px;
+    text-shadow: 2px 2px 3px rgba(52, 50, 50, 0.1);
+
+}

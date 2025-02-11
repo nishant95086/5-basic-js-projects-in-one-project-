@@ -1,0 +1,158 @@
+body{
+    background:linear-gradient(to top left, rgb(0, 0, 0), rgb(170, 40, 40));
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+nav ul li{
+    padding: 0 10px;
+}
+.navi{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background: linear-gradient(to bottom right,black,rgb(77, 11, 11));
+}
+.logo img{
+    width: 44px;
+    padding: 0 8px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: white;
+    margin: 10px;
+}
+.songcon{
+    position: relative;
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    width: 70%;
+    margin: 23px auto;
+    border-radius: 20px;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    z-index: 2;
+}
+.bottom{
+    background: linear-gradient(to top left,black,rgb(77, 11, 11));
+    position: sticky;
+    height: 125px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#gif{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+#scrol{
+    width: 50vw;
+    cursor: pointer;
+}
+
+.icons{
+    margin: 10px;
+}
+.play{
+    cursor: pointer;
+    
+}
+.songItem{
+    height: 40px;
+    display: flex;
+    background:linear-gradient(to top left,rgb(96, 11, 11),black);
+    color: white;
+    width: 100%;
+    margin: 12px 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.timestamp{
+    margin: 0 23px;
+}
+.songItemcont{
+    margin-top: 40px;
+    height: 400px;
+    width: 350px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.songItem img{
+    width: 30px;
+    height: 30px;
+    margin: 0 15px;
+    /* cursor: pointer; */
+}
+.songItem span{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.songlist{
+    display: flex;
+    align-items: center;
+}
+#play{
+    width: 40px;
+    height: 40px;
+}
+.icons img{
+    cursor: pointer;
+}
+
+.cir{
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.c1{
+    top: 100px;
+    left:40px;
+    background: linear-gradient(to bottom right,white,red);
+}
+.c2{
+    bottom:200px;
+    right:40px;
+    background: linear-gradient(to bottom right,red,black);
+}
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Scrollbar track (background) */
+  ::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 5px;
+  }
+  
+  /* Scrollbar thumb (draggable part) */
+  ::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 5px;
+  }
+  
+  /* Scrollbar thumb on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #444444;
+  }
+  

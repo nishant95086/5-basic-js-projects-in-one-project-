@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/?size=100&id=4377&format=png&color=000000">
+    <title>Time</title>
+    <style>
+        #box{
+            position: relative;
+            /* width: 600px;
+            height: 300px; */
+            background-color:#262626;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        #box::after,
+        #box::before {
+            content: "";
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+            position: absolute;
+            background-size:400%;
+            top:-2px;
+            left:-2px;
+            animation: rgbbox 10s linear infinite alternate;
+            z-index: -1;
+            border-radius: 10px;
+        }
+        #box::after{
+            filter: blur(30px);
+        }
+        @keyframes rgbbox{
+            0%{
+                background-position: 0 0;
+            }
+            50%{
+                background-position: 100% 0;
+            }
+            100%{
+                background-position: 0 0;
+            }
+        }
+        </style>
+</head>
+<body class="bg-black text-amber-50">
+    <div class="border-none w-20 px-3 m-5 rounded-2xl bg-gradient-to-br from-red-700 to-blue-400  text-black font-bold"><a href="index.html">Home</a></div>
+<div class="flex justify-center items-center ">
+    <div id="box" class=" w-[200px] min-h-20 flex flex-col my-20 md:w-[400px] md:min-h-30">
+        <h3 class="font-serif font-bold md:text-3xl md:my-5">Your local time</h3>
+        <div class="time md:text-2xl md:pb-5"></div>
+    </div>
+</div>
+    <script src="jspro2.js"></script>
+</body>
+</html>
